@@ -18,6 +18,9 @@ set wildmenu
 set mouse=a
 
 syntax on
+filetype on
+filetype plugin on
+filetype indent on
 setlocal t_Co=256
 setlocal background=dark
 colorscheme desert256 
