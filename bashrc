@@ -97,3 +97,9 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+export LC_MESSAGES=ja_JP.UTF-8
+export LC_COLLATE=ja_JP.UTF-8
+export LANGUAGE=ja:en_US:en
+export LC_CTYPE=ja_JP.UTF-8
+export LANG='ja_JP.UTF-8'
