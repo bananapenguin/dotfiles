@@ -108,3 +108,13 @@ if [ ! $TMUX ]; then
 		tmux -2
 	fi
 fi
+
+#環境変数
+#日本語設定
+export LC_MESSAGES=ja_JP.UTF-8
+export LC_COLLATE=ja_JP.UTF-8
+export LANGUAGE=ja:en_US:en
+export LC_CTYPE=ja_JP.UTF-8
+export LANG=ja_JP.UTF-8
+
+export EDITOR=vi
