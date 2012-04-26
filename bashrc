@@ -97,3 +97,14 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+#tmuxのセッションがあったらそれをアタッチ
+#無ければ新しいセッションで開始
+#tmuxの二重起動を避けるために$TMUXをみる
+if [ ! $TMUX ]; then
+	if tmux ls > /dev/null 2>&1; then
+		tmux -2 a
+	else
+		tmux -2
+	fi
+fi
