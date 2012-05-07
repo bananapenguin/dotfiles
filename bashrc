@@ -98,9 +98,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-#tmux$B$N%;%C%7%g%s$,$"$C$?$i$=$l$r%"%?%C%A(B
-#$BL5$1$l$P?7$7$$%;%C%7%g%s$G3+;O(B
-#tmux$B$NFs=E5/F0$rHr$1$k$?$a$K(B$TMUX$B$r$_$k(B
+#tmuxのセッションがあったらそれをアタッチ
+#無ければ新しいセッションで開始
+#tmuxの二重起動を避けるために$TMUXをみる
 if [ ! $TMUX ]; then
 	if tmux ls > /dev/null 2>&1; then
 		tmux -2 a
@@ -109,8 +109,8 @@ if [ ! $TMUX ]; then
 	fi
 fi
 
-#$B4D6-JQ?t(B
-#$BF|K\8l@_Dj(B
+#環境変数
+#日本語設定
 export LC_MESSAGES=ja_JP.UTF-8
 export LC_COLLATE=ja_JP.UTF-8
 export LANGUAGE=ja:en_US:en
