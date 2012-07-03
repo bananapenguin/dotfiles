@@ -33,6 +33,7 @@ setlocal hlsearch
 "let g:SrcExpl_UpdateTags = 1
 set encoding=utf-8
 set fileformat=unix
+set fileformats=dos,unix,mac
 set fileencoding=utf-8
 set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932,utf-8
 "ステータスラインの設定
