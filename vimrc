@@ -1,3 +1,5 @@
+set nocompatible
+set backspace=indent,eol,start
 " 長い行を折り返して表示 (nowrap:折り返さない)
 set wrap
 " 常にステータス行を表示 (詳細は:he laststatus)
@@ -24,13 +26,15 @@ filetype indent on
 setlocal t_Co=256
 "setlocal background=dark
 colorscheme desert256 
-setlocal number
+set number
 setlocal lcs=tab:>.,trail:_
 setlocal tabstop=4
 setlocal shiftwidth=4
-"setlocal tags=./tags;
-set tags+=~/ctags/tags,tags;
-setlocal hlsearch
+if has('path_extra')
+	set tags+=tags;
+endif
+set hlsearch
+set incsearch
 "let g:SrcExpl_UpdateTags = 1
 set encoding=utf-8
 set fileformat=unix
