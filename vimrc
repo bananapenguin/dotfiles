@@ -28,7 +28,8 @@ setlocal number
 setlocal lcs=tab:>.,trail:_
 setlocal tabstop=4
 setlocal shiftwidth=4
-setlocal tags=./tags;
+"setlocal tags=./tags;
+set tags+=~/ctags/tags,tags;
 setlocal hlsearch
 "let g:SrcExpl_UpdateTags = 1
 set encoding=utf-8
@@ -55,5 +56,17 @@ let &statusline='%<%f %h%m%r%w[%{(&fenc!=""?&fenc:&enc)}:%{ff_table[&ff]}]%y%= %
 "スクリプトの実行
 nnoremap <F5> :!%:p<CR>
 "tabの移動
-nnoremap <C-N> :tabn<CR>
-nnoremap <C-P> :tabp<CR>
+"nnoremap <C-N> :tabn<CR>
+"nnoremap <C-P> :tabp<CR>
+"GNU GLOBAL
+"map <C-g> :Gtags
+"map <C-h> :Gtags -f %<CR>
+"map <C-j> :Gtags <C-r><C-w><CR>
+"map <C-k> :Gtags -r <C-r><C-w><CR>
+"map <C-j> :GtagsCursor<CR>
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
+map <C-g> :vimgrep <C-r><C-w> ./**/*.{cpp,h}
+
+let g:SrcExpl_isUpdateTags = 0
+let g:SrcExpl_searchLocalDef = 1
