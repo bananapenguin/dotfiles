@@ -4,3 +4,8 @@ editor = vim
 
 [extensions]
 hgext.convert=
+graphlog=
+extdiff=
+
+[extdiff]
+cmd.vimdiff=vimdiff
