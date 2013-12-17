@@ -16,6 +16,7 @@ function create_link () {
 	ln -s $1 $2
 }
 
+create_link ${DIR}/bash_profile ~/.bash_profile
 create_link ${DIR}/bashrc ~/.bashrc
 create_link ${DIR}/vimrc ~/.vimrc
 create_link ${DIR}/vim ~/.vim
