@@ -22,3 +22,4 @@ create_link ${DIR}/vimrc ~/.vimrc
 create_link ${DIR}/vim ~/.vim
 create_link ${DIR}/hgrc ~/.hgrc
 create_link ${DIR}/tmux.conf ~/.tmux.conf
+create_link ${DIR}/dir_colors ~/.dir_colors

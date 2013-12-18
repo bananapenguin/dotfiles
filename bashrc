@@ -125,3 +125,5 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 	#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 	source /usr/local/bin/virtualenvwrapper.sh
 fi
+
+eval $(dircolors -b ~/.dir_colors)
