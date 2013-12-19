@@ -128,4 +128,9 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 	source /usr/local/bin/virtualenvwrapper.sh
 fi
 
-eval $(dircolors -b ~/.dir_colors)
+#dircolors setting
+if which dircolors > /dev/null 2>&1; then
+	if [ -e ~/.dir_colors ]; then
+		eval $(dircolors -b ~/.dir_colors)
+	fi
+fi
