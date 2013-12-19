@@ -101,11 +101,13 @@ fi
 #tmuxのセッションがあったらそれをアタッチ
 #無ければ新しいセッションで開始
 #tmuxの二重起動を避けるために$TMUXをみる
-if [ ! $TMUX ]; then
-	if tmux ls > /dev/null 2>&1; then
-		tmux -2 a
-	else
-		tmux -2
+if which tmux > /dev/null 2>&1; then
+	if [ ! $TMUX ]; then
+		if tmux ls > /dev/null 2>&1; then
+			tmux -2 a
+		else
+			tmux -2
+		fi
 	fi
 fi
 
