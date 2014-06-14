@@ -75,6 +75,8 @@ if [ -x /usr/bin/dircolors ]; then
     #alias grep='grep --color=auto'
     #alias fgrep='fgrep --color=auto'
     #alias egrep='egrep --color=auto'
+else
+	alias ls='ls -G'
 fi
 
 # some more ls aliases
@@ -90,6 +92,10 @@ fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+if [ -f ~/.profile ]; then
+	. ~/.profile
+fi
+
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -125,3 +131,4 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 	#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 	source /usr/local/bin/virtualenvwrapper.sh
 fi
+
