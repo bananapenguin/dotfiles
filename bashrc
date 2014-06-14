@@ -107,11 +107,13 @@ fi
 #tmuxのセッションがあったらそれをアタッチ
 #無ければ新しいセッションで開始
 #tmuxの二重起動を避けるために$TMUXをみる
-if [ ! $TMUX ]; then
-	if tmux ls > /dev/null 2>&1; then
-		tmux -2 a
-	else
-		tmux -2
+if which tmux > /dev/null 2>&1; then
+	if [ ! $TMUX ]; then
+		if tmux ls > /dev/null 2>&1; then
+			tmux -2 a
+		else
+			tmux -2
+		fi
 	fi
 fi
 
@@ -132,3 +134,9 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 	source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+#dircolors setting
+if which dircolors > /dev/null 2>&1; then
+	if [ -e ~/.dir_colors ]; then
+		eval $(dircolors -b ~/.dir_colors)
+	fi
+fi
