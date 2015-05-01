@@ -140,3 +140,8 @@ if which dircolors > /dev/null 2>&1; then
 		eval $(dircolors -b ~/.dir_colors)
 	fi
 fi
+
+#git-completion setting
+if [ -f ~/.git-completion.bash ]; then
+	source ~/.git-completion.bash
+fi

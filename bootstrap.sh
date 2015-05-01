@@ -24,3 +24,4 @@ create_link ${DIR}/hgrc ~/.hgrc
 create_link ${DIR}/tmux.conf ~/.tmux.conf
 create_link ${DIR}/dir_colors ~/.dir_colors
 create_link ${DIR}/uncrustify.cfg ~/.uncrustify.cfg
+create_link ${DIR}/git-completion.bash ~/.git-completion.bash
